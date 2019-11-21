@@ -1,11 +1,18 @@
+# Name: Tim Chen
+# Date: 11/10/2019
+
 import pandas as pd
 import math as m
 import matplotlib.pyplot as plt
+# from matplotlib.pyplot import figure
+import numpy as np
 
+#Global data for all functions
 # import data for all functions
 df = pd.read_csv('all_data.csv', header=0, index_col=0)
-# filter the SAT submit rate > 0.6
-df_filter = df[df['Students Submitting SAT'] >=0.6].reset_index()
+# filter the SAT submit rate > 0.6, and reset index for sorting
+df_filter = df[df['Students Submitting SAT'] >= 0.6].reset_index()
+
 
 
 def intro():
@@ -53,7 +60,7 @@ def rate_bar():
     plt.ylabel('Counts')
 
     plt.show()
-    return
+    return new_rate
 
 def sat_reading_low():
     SAT = df_filter['SAT Reading']
@@ -222,15 +229,13 @@ def sat_math_avg():
     plt.title('SAT Math Average For 157 Schools')
     plt.xlabel('SAT Range')
     plt.ylabel('Counts')
+    # plt.figure(figsize = [30,30])
     plt.show()
+    # figure(num=None, figsize=(8, 6), dpi=80, facecolor='w', edgecolor='k')
+
     return avg
 
 
-
-
-
-
-
-
+# def scatter_math_rate():
 
 
