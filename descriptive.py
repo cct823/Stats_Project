@@ -19,6 +19,10 @@ def intro():
 
     print('function in this code:\nrate_bar()\nsat_reading_low()\nsat_reading_high()\n'
           'sat_reading_avg()\nsat_math_low()\nsat_math_high()\nsat_math_avg()')
+    # Mean SAT reading 609
+    # Mean SAT math 609
+    # Avg Applicants 14588
+    # Mean All SAT 1219
 
 
 def rate_bar():
